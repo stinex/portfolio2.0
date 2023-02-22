@@ -1,0 +1,34 @@
+:root {
+  --index: calc(1vw + 1vh);
+  --calor-bg: #223d30;
+  --color-theme-red: #320706;
+  --color-theme-green: #223d30;
+  --color-theme-grey: #292929;
+  --color-typography: #fafafafa;
+}
+
+[data-theme='dark'] {
+  --calor-bg: #000000;
+}
+
+* {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+}
+
+html,
+body {
+  max-width: 100vw;
+  overflow-x: hidden;
+}
+
+body {
+  background: var(--calor-bg);
+  color: var(--color-typography);
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
