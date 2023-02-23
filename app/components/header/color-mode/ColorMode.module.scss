@@ -57,7 +57,7 @@
     z-index: 1;
   }
   .bg {
-    background: rgba(255, 251, 251, 0.05);
+    background: var(--color-transparent);
     border-radius: 100px;
     position: absolute;
     width: 100%;

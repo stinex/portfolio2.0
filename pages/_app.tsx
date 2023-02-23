@@ -6,7 +6,7 @@ import { Provider } from 'react-redux'
 import { store } from '@/app/store/store'
 
 const montserrat = Montserrat({
-  weight: '400',
+  weight: ['400', '500', '700', '800'],
   subsets: ['latin'],
 })
 

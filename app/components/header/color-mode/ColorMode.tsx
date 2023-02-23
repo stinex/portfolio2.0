@@ -44,8 +44,6 @@ const ColorMode: FC = () => {
 
   const { setColorMode } = useActions()
 
-  const { colorMode } = useTypedSelector((state) => state)
-  console.log(colorMode)
   return (
     <div
       className={styles.color}
