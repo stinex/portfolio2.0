@@ -4,6 +4,7 @@ import styles from './Home.module.scss'
 import TitleScroll from '../../components/title-scroll/TitleScroll'
 import Layout from '../../layout/layout/Layout'
 import HorizontalLine from '@/app/components/horizontal-line/HorizontalLine'
+import ListProjects from '@/app/components/list-projects/ListProjects'
 
 const Home: FC = () => {
   return (
@@ -69,12 +70,7 @@ const Home: FC = () => {
                 </div>
               </div>
               <div className={styles.block}>
-                <div className={styles.list_projects}>
-                  <div className={styles.item}>
-                    <div className={styles.name}></div>
-                    <div className={styles.stack}></div>
-                  </div>
-                </div>
+                <ListProjects />
               </div>
             </div>
           </Container>
