@@ -1,22 +1,24 @@
 :root {
   --index: calc(1vw + 1vh);
   --calor-bg: #223d30;
-  --color-theme-red: #400E0E;
+  --color-theme-red: #400e0e;
   --color-theme-green: #082618;
-  --color-theme-grey: #1D1D1D;
+  --color-theme-grey: #1d1d1d;
   --color-typography: #fafafafa;
   --color-transparent: rgba(255, 251, 251, 0.05);
   --color-transparent-active: rgba(255, 251, 251, 0.1);
+  --transition: 1.25s cubic-bezier(0.2, 0.5, 0, 1);
+  --transition-cursor: 1.5s cubic-bezier(0.05, 0.5, 0, 1);
 }
 
 [data-theme='theme-red'] {
-  --calor-bg: #400E0E;
+  --calor-bg: #400e0e;
 }
 [data-theme='theme-green'] {
   --calor-bg: #082618;
 }
 [data-theme='theme-grey'] {
-  --calor-bg: #1D1D1D;
+  --calor-bg: #1d1d1d;
 }
 
 * {

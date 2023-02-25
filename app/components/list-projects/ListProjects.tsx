@@ -8,9 +8,9 @@ import { projects } from '@/app/data/projects/projects.data'
 const ListProjects: FC = () => {
   return (
     <div className={styles.list_projects}>
-      {projects.map((project) => (
-        <ProjectItem key={project.link} project={project} />
-      ))}
+      {projects.map((project) => {
+        return <ProjectItem key={project.link} project={project} />
+      })}
     </div>
   )
 }

@@ -3,22 +3,38 @@ import { FC } from 'react'
 import styles from './ProjectItem.module.scss'
 
 import { IProject } from '@/app/data/projects/projects.interface'
+import Image from 'next/image'
 
 interface IProjectItem {
   project: IProject
 }
 
 const ProjectItem: FC<IProjectItem> = ({ project }) => {
+  const setCursor = (e: any) => {
+    document.body.style.cssText = `--move-x: ${e.clientX}px; --move-y: ${e.clientY}px;`
+  }
+
   return (
-    <a href={project.link} target="_blank" className={styles.project}>
+    <a
+      href={project.link}
+      target="_blank"
+      onMouseMove={(e) => setCursor(e)}
+      className={styles.project}
+    >
       <div className={styles.project_top}>
         <div className={styles.name}>{project.name}</div>
         <div className={styles.stacks}>
           {project.stack.map((stack) => (
-            <span className={styles.stack}>{stack}</span>
+            <span key={stack} className={styles.stack}>
+              {stack}
+            </span>
           ))}
         </div>
+        <div className={styles.cursor} id="cursor">
+          <Image src={project.img} className={styles.img} alt={project.name} />
+        </div>
       </div>
+
       <span className={styles.line}></span>
     </a>
   )
