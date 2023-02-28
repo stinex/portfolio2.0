@@ -1,9 +1,9 @@
 import { IProject } from './projects.interface'
 
-import ImageProductOne from '@/app/assets/images/1.jpg'
-import ImageProductTwo from '@/app/assets/images/2.jpg'
-import ImageProductThree from '@/app/assets/images/3.jpg'
-import ImageProductFour from '@/app/assets/images/4.jpg'
+import ImageProductOne from '@/app/assets/images/3.png'
+import ImageProductTwo from '@/app/assets/images/4.png'
+import ImageProductThree from '@/app/assets/images/1.png'
+import ImageProductFour from '@/app/assets/images/2.png'
 
 export const projects: IProject[] = [
   {
