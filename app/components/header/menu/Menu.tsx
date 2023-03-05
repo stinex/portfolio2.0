@@ -1,17 +1,35 @@
-import { FC } from 'react'
+import { FC, useEffect } from 'react'
 
 import styles from './Menu.module.scss'
 import { link_ru } from '@/app/data/link/link.data'
 import MenuItem from './menu-item/MenuItem'
+import { IMenu } from '@/app/store/menu/menu.interface'
+import Container from '../../container/Container'
 
-const Menu: FC = () => {
+const Menu: FC<IMenu> = ({ menu }) => {
+  useEffect(() => {
+    if (menu === true) {
+      ;(
+        document.documentElement.querySelector('body') as HTMLElement
+      ).classList.add('hide')
+    } else {
+      ;(
+        document.documentElement.querySelector('body') as HTMLElement
+      ).classList.remove('hide')
+    }
+  }, [menu])
+
   return (
-    <nav>
-      <ul>
-        {link_ru.map((item) => (
-          <MenuItem key={item.href} item={item} />
-        ))}
-      </ul>
+    <nav className={`${styles.menu} ${menu === true ? styles.open : ''}`}>
+      <Container>
+        <ul className={styles.ul}>
+          {link_ru.map((item) => (
+            <li className={styles.li} key={item.href}>
+              <MenuItem item={item} />
+            </li>
+          ))}
+        </ul>
+      </Container>
     </nav>
   )
 }

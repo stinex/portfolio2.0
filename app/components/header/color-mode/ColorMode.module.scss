@@ -5,6 +5,7 @@
   cursor: pointer;
   position: relative;
   gap: 10px;
+  flex-shrink: 0;
 
   &_options {
     display: flex;

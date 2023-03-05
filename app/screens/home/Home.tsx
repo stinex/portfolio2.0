@@ -1,7 +1,7 @@
 import { FC } from 'react'
 import Container from '../../components/container/Container'
 import styles from './Home.module.scss'
-import TitleScroll from '../../components/title-scroll/TitleScroll'
+import TitleScroll from '../../components/title-scroll/TextScroll'
 import Layout from '../../layout/layout/Layout'
 import HorizontalLine from '@/app/components/horizontal-line/HorizontalLine'
 import ListProjects from '@/app/components/list-projects/ListProjects'
@@ -14,7 +14,7 @@ const Home: FC = () => {
     >
       <div className={styles.wrapper}>
         <div className={styles.main_section}>
-          <TitleScroll />
+          <TitleScroll text="FRONTEND DEVELOPER &&nbsp;" />
           <Container>13212</Container>
         </div>
         <div className={styles.second_section}>

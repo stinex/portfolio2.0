@@ -1,15 +1,25 @@
 .header {
+  transition: var(--transition-cursor);
+  transition-delay: .2s;
+  &.down {
+    transform: translateY(-100%);
+  }
+  &.up {
+    transform: translateY(0%);
+  }
   position: fixed;
   z-index: 10;
   width: 100%;
   &_wapper {
     display: flex;
     align-items: center;
-    justify-content: space-between;
     height: 90px;
+    gap: 15px;
 
     .logo {
-      font-size: calc(var(--index) * .8);
+      font-size: calc(var(--index) * 0.8);
+      width: 100%;
+      z-index: 2;
     }
   }
 }

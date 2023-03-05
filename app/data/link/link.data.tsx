@@ -2,19 +2,19 @@ import { ILink } from "@/app/data/link/link.interface"
 
 export const link_ru: ILink[] = [
   {
-    name: "Скиллы",
-    href: "skills",
+    name: 'Skills',
+    href: 'skills',
   },
   {
-    name: "Портфолио",
-    href: "portfolio",
+    name: 'Portfolio',
+    href: 'portfolio',
   },
   {
-    name: "Обо мне",
-    href: "about",
+    name: 'About',
+    href: 'about',
   },
   {
-    name: "Опыт",
-    href: "experience",
+    name: 'Experience',
+    href: 'experience',
   },
 ]
