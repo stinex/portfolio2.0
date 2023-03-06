@@ -9,6 +9,8 @@
   position: relative;
   cursor: pointer;
   z-index: 10;
+  transform: rotate(0deg);
+  transition: 0.5s ease-in-out;
 
   &::after {
     content: '';
@@ -30,8 +32,31 @@
     width: 22px;
     height: 1px;
     background: var(--calor-bg);
+    position: relative;
+    transition: .25s ease-in-out;
+    will-change: transform;
     &_middle {
       margin: 3.5px 0;
+    }
+  }
+
+  &.open {
+    .line {
+      &_middle {
+        margin: 0;
+      }
+      &_top {
+        transform: rotate(-135deg);
+        top: 1px;
+      }
+      &_middle {
+        opacity: 0;
+        transform: translateX(-60px);
+      }
+      &_bottom {
+        transform: rotate(135deg);
+        top: -1px;
+      }
     }
   }
 }

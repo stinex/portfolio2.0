@@ -1,9 +1,9 @@
-import Link from 'next/link'
 import { FC } from 'react'
-
-import styles from './MenuItem.module.scss'
+import Link from 'next/link'
 
 import { ILink } from '@/app/data/link/link.interface'
+
+import styles from './MenuItem.module.scss'
 
 interface IMenuItemLink {
   item: ILink

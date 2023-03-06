@@ -1,6 +1,7 @@
 import { FC } from 'react'
 import { Anton } from '@next/font/google'
 import Marquee from 'react-fast-marquee'
+
 import styles from './TextScroll.module.scss'
 
 const bebasNeue = Anton({

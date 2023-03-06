@@ -1,5 +1,4 @@
 import { useActions } from '@/app/hooks/useActions'
-import { useTypedSelector } from '@/app/hooks/useTypedSelector'
 import { FC, useRef } from 'react'
 
 import styles from './ColorMode.module.scss'
@@ -23,7 +22,7 @@ const ColorMode: FC = () => {
     }
 
     Array.from(colorArr)?.map((item) => {
-      if (!item.getAttribute('style')) {
+      if (colors.current?.getAttribute('style')) {
         var op = 0
         while (op <= 1) {
           ;(function (_op) {

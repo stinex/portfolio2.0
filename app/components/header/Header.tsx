@@ -1,7 +1,7 @@
-import { useActions } from '@/app/hooks/useActions'
-import { useTypedSelector } from '@/app/hooks/useTypedSelector'
 import Link from 'next/link'
 import { FC, useCallback, useEffect, useState } from 'react'
+
+import { useTypedSelector } from '@/app/hooks/useTypedSelector'
 import Container from '../container/Container'
 import ButtonMenu from './button-menu/ButtonMenu'
 import ColorMode from './color-mode/ColorMode'

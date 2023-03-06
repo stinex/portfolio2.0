@@ -3,6 +3,7 @@ import { FC, PropsWithChildren } from "react";
 import { useRouter } from "next/router";
 import { siteName, titleMerge } from "./meta.config";
 import { ISeo } from "./meta.interface";
+import { useTypedSelector } from "@/app/hooks/useTypedSelector";
 
 const Meta: FC<PropsWithChildren<ISeo>> = ({
   title,
@@ -13,6 +14,9 @@ const Meta: FC<PropsWithChildren<ISeo>> = ({
 }) => {
   const { asPath } = useRouter();
   const currentUrl = `${process.env.NEXT_PUBLIC_APP_URL}${asPath}`;
+
+  const { colorMode } = useTypedSelector((state) => state)
+
   return (
     <>
       <Head>
@@ -25,6 +29,16 @@ const Meta: FC<PropsWithChildren<ISeo>> = ({
               content={description}
             />
             <link rel="canonical" href={currentUrl} />
+            <link
+              rel="shortcut icon"
+              href={
+                (colorMode as any) === 'theme-red'
+                  ? '/1.ico'
+                  : (colorMode as any) === 'theme-green'
+                  ? '/2.ico'
+                  : '/3.ico'
+              }
+            />
             <meta property="og:type" content={type} />
             <meta property="og:locale" content="ru" />
             <meta property="og:title" content={titleMerge(title)} />
@@ -39,6 +53,6 @@ const Meta: FC<PropsWithChildren<ISeo>> = ({
       </Head>
       {children}
     </>
-  );
+  )
 };
 export default Meta;

@@ -1,15 +1,17 @@
 import { FC } from 'react'
-import Container from '../../components/container/Container'
-import styles from './Home.module.scss'
-import TitleScroll from '../../components/title-scroll/TextScroll'
-import Layout from '../../layout/layout/Layout'
+
+import Layout from '@/app/layout/layout/Layout'
+import Container from '@/app/components/container/Container'
+import TitleScroll from '@/app/components/title-scroll/TextScroll'
 import HorizontalLine from '@/app/components/horizontal-line/HorizontalLine'
 import ListProjects from '@/app/components/list-projects/ListProjects'
+
+import styles from './Home.module.scss'
 
 const Home: FC = () => {
   return (
     <Layout
-      title="Home"
+      title="Portfolio"
       description="More than just great coffee. Explore the menu, sign up for Starbucks® Rewards, manage your gift card and more."
     >
       <div className={styles.wrapper}>

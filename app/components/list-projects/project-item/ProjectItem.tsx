@@ -1,9 +1,9 @@
 import { FC } from 'react'
-
-import styles from './ProjectItem.module.scss'
+import Image from 'next/image'
 
 import { IProject } from '@/app/data/projects/projects.interface'
-import Image from 'next/image'
+
+import styles from './ProjectItem.module.scss'
 
 interface IProjectItem {
   project: IProject

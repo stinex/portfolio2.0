@@ -1,10 +1,11 @@
 import { FC, useEffect } from 'react'
 
-import styles from './Menu.module.scss'
+import { IMenu } from '@/app/store/menu/menu.interface'
 import { link_ru } from '@/app/data/link/link.data'
 import MenuItem from './menu-item/MenuItem'
-import { IMenu } from '@/app/store/menu/menu.interface'
 import Container from '../../container/Container'
+
+import styles from './Menu.module.scss'
 
 const Menu: FC<IMenu> = ({ menu }) => {
   useEffect(() => {

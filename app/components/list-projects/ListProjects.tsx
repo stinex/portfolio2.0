@@ -1,9 +1,9 @@
 import React, { FC } from 'react'
-import styles from './ListProjects.module.scss'
-
-import ProjectItem from './project-item/ProjectItem'
 
 import { projects } from '@/app/data/projects/projects.data'
+import ProjectItem from './project-item/ProjectItem'
+
+import styles from './ListProjects.module.scss'
 
 const ListProjects: FC = () => {
   return (
