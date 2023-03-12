@@ -28,13 +28,13 @@ export const projects: IProject[] = [
     img: ImageProductTwo,
   },
   {
-    name: 'Ergonova - online store of goods for health & outdoor activities',
+    name: 'Ergonova — online store of goods for health & outdoor activities',
     link: 'https://ergonova.ru',
     stack: ['html', 'angularjs', 'javascript', 'less'],
     img: ImageProductThree,
   },
   {
-    name: 'MWT - online store of goods for health & outdoor activities',
+    name: 'MWT — online store of goods for health & outdoor activities',
     link: 'https://mwt.ru',
     stack: ['html', 'angularjs', 'javascript', 'less'],
     img: ImageProductFour,

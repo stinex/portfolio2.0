@@ -1,5 +1,7 @@
 import { FC } from 'react'
 
+import { job } from '@/app/data/job/job.data'
+
 import Layout from '@/app/layout/layout/Layout'
 import Container from '@/app/components/container/Container'
 import TitleScroll from '@/app/components/title-scroll/TextScroll'
@@ -7,6 +9,7 @@ import HorizontalLine from '@/app/components/horizontal-line/HorizontalLine'
 import ListProjects from '@/app/components/list-projects/ListProjects'
 
 import styles from './Home.module.scss'
+import Experience from '@/app/components/experience/Experience'
 
 const Home: FC = () => {
   return (
@@ -73,6 +76,36 @@ const Home: FC = () => {
               </div>
               <div className={styles.block}>
                 <ListProjects />
+              </div>
+            </div>
+          </Container>
+        </div>
+        <div className={styles.three_section}>
+          <Container>
+            <div className={styles.blocks}>
+              <div className={styles.title}>
+                <span>E</span>
+                <span>X</span>
+                <span>P</span>
+                <span>E</span>
+                <span>R</span>
+                <span>I</span>
+                <span>E</span>
+                <span>N</span>
+                <span>C</span>
+                <span>E</span>
+              </div>
+
+              <div className={styles.experience}>
+                <HorizontalLine />
+                {job.map((item) => {
+                  return (
+                    <>
+                      <Experience key={item.job_name} job={item} />
+                      <HorizontalLine />
+                    </>
+                  )
+                })}
               </div>
             </div>
           </Container>

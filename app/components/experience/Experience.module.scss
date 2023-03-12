@@ -1,0 +1,42 @@
+.item {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr) 3fr auto;
+  margin-bottom: calc(var(--index) * 0.9);
+  padding: 0 15px;
+  
+  .data {
+    font-size: calc(var(--index) * 0.5);
+  }
+  .company {
+    .name {
+      font-size: calc(var(--index) * 0.8);
+      font-weight: 800;
+      margin-bottom: 5px;
+    }
+    .job_title {
+      font-size: calc(var(--index) * 0.6);
+    }
+  }
+  .description {
+    font-size: calc(var(--index) * 0.7);
+    line-height: calc(var(--index) * 1);
+
+    &.read {
+      overflow: hidden;
+      text-overflow: ellipsis;
+      display: -moz-box;
+      -moz-box-orient: vertical;
+      display: -webkit-box;
+      -webkit-line-clamp: 2;
+      -webkit-box-orient: vertical;
+      line-clamp: 2;
+      box-orient: vertical;
+    }
+  }
+  .btn {
+    font-size: calc(var(--index) * 0.5);
+    text-transform: uppercase;
+    padding-left: 50px;
+    cursor: pointer;
+  }
+}
